@@ -12,6 +12,10 @@ app.use(cors({
   }));
   
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
 // Mount routes
 app.use('/api/news', newsRoutes);
 
