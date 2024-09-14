@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://aconewssuraj.web.app','https://aconews-q5f5hm68b-suraj-kumar-guptas-projects.vercel.app/']  // This allows requests only from the frontend
+  origin: ['http://localhost:3000', 'https://aconewssuraj.web.app','https://aconews-q5f5hm68b-suraj-kumar-guptas-projects.vercel.app/','https://aconews-eight.vercel.app/']  // This allows requests only from the frontend
   }));
   
 
