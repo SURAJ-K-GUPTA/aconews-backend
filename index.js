@@ -7,10 +7,12 @@ const newsRoutes = require('./src/routes/newsRoutes');
 const app = express();
 app.use(express.json());
 
-app.use(cors({
-  origin: ['http://localhost:3000', 'https://aconewssuraj.web.app','https://aconews-q5f5hm68b-suraj-kumar-guptas-projects.vercel.app/','https://aconews-eight.vercel.app/']  // This allows requests only from the frontend
-  }));
-  
+// Allow all CORS requests
+app.use(cors());  // This allows requests from any origin
+
+// Optional: Handle preflight requests
+app.options('*', cors());
+
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
